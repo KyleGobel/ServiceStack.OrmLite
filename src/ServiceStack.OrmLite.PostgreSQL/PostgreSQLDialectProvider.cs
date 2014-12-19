@@ -331,7 +331,7 @@ namespace ServiceStack.OrmLite.PostgreSQL
             if (fieldDef.CustomFieldDefinition == "json")
             {
                 p.ParameterName = this.GetParam(SanitizeFieldNameForParamName(fieldDef.FieldName));
-                ((NpgsqlParameter) p).NpgsqlDbType = NpgsqlDbType.Json;
+                ((NpgsqlParameter) p).NpgsqlDbType = NpgsqlDbType.Varchar;
                 return;
             }
             if (fieldDef.CustomFieldDefinition == "text[]")
